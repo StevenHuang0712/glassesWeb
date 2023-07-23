@@ -1,11 +1,22 @@
 .header {
   background-color: $primary;
   font-size: 20px;
+  color: $white;
+  padding: 12px 0;
 }
 
 .logo {
   text-indent: 101%;
   overflow: hidden;
   white-space: nowrap;
-  background-image: url(../../images/logo-white.png);
+  background-image: url(../images/logo-white.png);
+}
+
+.nav {
+  li {
+    margin-right: 64px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

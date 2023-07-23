@@ -1,6 +1,6 @@
 $primary: #AA0601;
 $secondary: #650300;
-$red-1: #9F1213;
+$red: #9F1213;
 $pink: #FBF2F2;
 $white: #ffffff;
 $black: #000000;
@@ -17,4 +17,8 @@ $black: #000000;
 
 .justify-between {
     justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
 }
