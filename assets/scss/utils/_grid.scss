@@ -20,6 +20,9 @@
     margin-left: -12px;
     margin-right: -12px;
     display: flex;
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+      }
 }
 
 .col-3 {
@@ -33,6 +36,8 @@
 .col-6 {
     width: 50%;
 }
+
+
 
 
 

@@ -1,21 +1,42 @@
 .bg-banner {
     background-image: url(../images/home-header.png);
     background-size: cover;
+
+    @media (max-width: 767px) {
+        background-image: url(../images/home-header-sm.png);
+      }
 }
 
 .banner-text {
     flex-direction: column;
     align-items: flex-end;
+    padding-top: 296px;
+    padding-bottom: 296px;
     padding: 296px 0;
     color: $secondary;
+
+    @media (max-width: 767px) {
+        padding: 144px 12px;
+
+    }
 
     .banner-title {
         font-size: 64px;
         margin-bottom: 4px;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+            margin-bottom: 8px;
+          }
     }
 
     .banner-subtitle {
         font-size: 36px;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+            margin-bottom: 8px;
+          }
     }
 
     .banner-btn {
@@ -27,8 +48,24 @@
 
 .feature {
 
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
     h2 {
         margin-bottom: 24px;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+          }
+    }
+
+    li {
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 24px;
+          }
     }
 
     .material-icons-outlined {
@@ -48,9 +85,26 @@
 
 .classic {
 
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
     h2 {
         margin-bottom: 48px;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+          }
     }
+
+    li {
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 24px;
+          }
+    }
+
     img {
         margin-bottom: 8px;
     }
@@ -59,17 +113,43 @@
 .bg-index {
     background-image: url(../images/index-bg.png);
     background-size: cover;
+
+    @media (max-width: 767px) {
+        background-image: url(../images/index-bg-sm.png);
+      }
 }
 
 .co-branding {
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (max-width: 767px) {
+        padding: 40px 12px;
+      }
     
-    h2 {
+    .co-branding-title {
         margin-bottom: 48px;
         color: white;
+
+        @media (max-width: 767px) {
+            margin-bottom: 24px;
+            font-size: 24px;
+          }
+    }
+
+    ul {
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+          }
     }
 
     li {
         width: 100%;
+        @media (max-width: 767px) {
+            &:first-child {
+                margin-bottom: 24px;
+            }
+          }
 
         a {
             .co-branding-left-img {
@@ -86,7 +166,7 @@
                 height: 240px;
             }
 
-            h2 {
+            .co-branding-content {
                 background-color: white;
                 color: $primary;
             }
@@ -96,8 +176,31 @@
 
 .recommend {
 
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
     h2 {
         margin-bottom: 48px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 24px;
+            font-size: 24px;
+          }
+    }
+
+    ul {
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+          }
+    }
+
+    li {
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 16px;
+          }
     }
 
     .recommend-text {
@@ -122,19 +225,38 @@
 
 .contact {
 
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+    
+
     .contact-center {
         width: 50%;
         margin: 0 auto;
+        @media (max-width: 767px) {
+            width: 100%
+          }
     }
 
     h2 {
         margin-bottom: 48px;
         text-align: center;
+
+        @media (max-width: 767px) {
+            margin-bottom: 24px;
+            font-size: 24px;
+          }
     }
 
     p {
         margin-bottom: 24px;
         font-size: 20px;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+          }
     }
 
     label {
@@ -161,6 +283,7 @@
     .agree-box {
         width: auto;
         height: auto;
+        margin-right: 4px;
     }
 
     .contact-btn {
@@ -171,5 +294,9 @@
         border: none;
         background-color: $primary;
         color: white;
+        cursor: pointer;
+        @media (max-width: 767px) {
+            width: 100%;
+          }
     }
 }
