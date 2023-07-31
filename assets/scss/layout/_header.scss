@@ -1,8 +1,49 @@
 .header {
-  background-color: $primary;
   font-size: 20px;
-  color: $white;
-  padding: 12px 0;
+  color: white;
+  padding: 16px 0;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding: 16px 0 0 0;
+    max-width: 100%;
+    /* 移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
+  }
+    .nav {
+
+      @media (max-width: 767px) {
+        flex-wrap: wrap;
+        }
+
+        li {
+              height: 100%;
+              &:last-child {
+                padding-right: 0;
+              }
+
+              &:hover {
+                opacity: 0.7;
+              }
+
+              @media (max-width: 767px) {
+                width: 50%;
+                border: 1px solid white;
+              }
+
+                  a {
+                      display: block;
+                      height: 100%;
+                      padding: 8px 32px;
+
+                      @media (max-width: 767px) {
+                        padding: 12px 0;
+                        font-size: 16px;
+                        text-align: center;
+                      }
+
+                  }
+            }
+    }
 }
 
 .logo {
@@ -10,13 +51,11 @@
   overflow: hidden;
   white-space: nowrap;
   background-image: url(../images/logo-white.png);
-}
+  background-size: cover;
+  width: 80px;
+  height: 48.57px;
 
-.nav {
-  li {
-    margin-right: 64px;
-    &:last-child {
-      margin-right: 0;
-    }
+  @media (max-width: 767px) {
+    margin: 0 0 16px 16px;
   }
 }

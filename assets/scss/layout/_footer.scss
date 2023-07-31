@@ -1,0 +1,103 @@
+.footer {
+    padding-top: 48px;
+    color: white;
+
+    @media (max-width: 767px) {
+        padding-top: 24px;
+      }
+
+    .footer-top {
+        border-bottom: 1px solid white;
+        padding-bottom: 24px;
+        
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding-bottom: 16px;
+          }
+    }
+
+    
+
+    .footer-title {
+        margin-bottom: 24px;
+
+        .footer-nav {
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        .social-media {
+            li {
+                display: inline;
+    
+                @media (max-width: 767px) {
+                    margin-right: 8px;
+                  }
+    
+                img {
+                    width: 48px;
+    
+                    @media (max-width: 767px) {
+                        width: 24px;
+                      }
+                }
+            }
+        }
+    }
+
+    
+    .footer-contact {
+        li {
+            font-size: 36px;
+            margin-bottom: 8px;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+              }
+
+            .material-icons-outlined {
+                font-size: 36px;
+                margin-right: 16px;
+
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                    margin-right: 8px;
+                  }
+            }
+        }  
+    }
+
+    .footer-bottom {
+        padding: 32px 0;
+
+        @media (max-width: 767px) {
+            display: block;
+            padding: 16px 0;
+          }
+
+          p {
+            @media (max-width: 767px) {
+                margin-bottom: 8px;
+              }
+          }
+
+          ul {
+            font-size: 14px;
+
+            @media (max-width: 767px) {
+                display: block;
+                font-size: 16px;
+              }
+          }
+
+          li {
+            @media (max-width: 767px) {
+                margin-bottom: 8px;
+              }
+          }
+    }
+
+}
