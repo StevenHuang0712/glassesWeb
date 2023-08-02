@@ -1,7 +1,8 @@
 .header {
   font-size: 20px;
   color: white;
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -16,7 +17,7 @@
         }
 
         li {
-              height: 100%;
+              padding: 8px 32px;
               &:last-child {
                 padding-right: 0;
               }
@@ -27,14 +28,14 @@
 
               @media (max-width: 767px) {
                 width: 50%;
+                padding: 0;
                 border: 1px solid white;
               }
 
                   a {
                       display: block;
                       height: 100%;
-                      padding: 8px 32px;
-
+                      
                       @media (max-width: 767px) {
                         padding: 12px 0;
                         font-size: 16px;
@@ -55,7 +56,57 @@
   width: 80px;
   height: 48.57px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
+    a {
+        display: block;
+        height: 100%;
+    }
+
   @media (max-width: 767px) {
     margin: 0 0 16px 12px;
   }
+}
+
+/* headerClassic */
+
+.glasses-type-bar {
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+  li {
+      width: 33.333%;
+      border-left: 1px solid #DCDCDC;
+      border-right: 1px solid #DCDCDC;
+
+      &:hover {
+          border-bottom: 8px solid $primary;
+          a {
+              padding-bottom: 16px;
+          }
+      }
+
+      a {
+          display: block;
+          padding: 24px 0;
+          text-align: center;
+          font-size: 32px;
+          font-weight: 500;
+
+          @media (max-width: 767px) {
+            font-size: 16px;
+          }
+          
+      }
+
+  }
+}
+
+.select-active {
+  border-bottom: 8px solid $primary;
+      a {
+          padding-bottom: 16px;
+      }
 }

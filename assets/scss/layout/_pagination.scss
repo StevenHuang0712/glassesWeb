@@ -1,0 +1,40 @@
+.pagination-select {
+    
+    li {
+        width: 42px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border: 1px solid #555555;
+        text-align: center;
+
+        a {
+            font-size: 18px;
+            color: #555555;
+        }
+
+        &:first-child a {
+            font-size: 19px;
+        }
+        &:last-child a {
+            font-size: 19px;
+        } 
+    }
+
+    .page-active {
+        background-color: black;
+        a {
+            color: white;
+        }
+    }
+
+    .last-page, .next-page {
+        width: 81px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+
+    .next-page {
+        background-color: #F2F2F2;
+    }
+    
+}

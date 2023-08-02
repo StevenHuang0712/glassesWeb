@@ -37,6 +37,12 @@
     width: 50%;
 }
 
+.col-md {
+    @media (max-width: 767px) {
+        width: 100%;
+      }
+}
+
 
 
 

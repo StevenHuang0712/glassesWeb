@@ -1,0 +1,92 @@
+.header-img {
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 296px;
+    @media (max-width: 767px) {
+        height: 136px;
+      }
+}
+
+.optical-header-img-l {
+    background-image: url(../images/product-header-1.png);
+    @media (max-width: 767px) {
+        background-image: url(../images/product-header-sm-1.png);
+      }
+}
+
+.optical-header-img-r {
+    background-image: url(../images/product-header-2.png);
+    background-position: right center;
+    @media (max-width: 767px) {
+        background-image: url(../images/product-header-sm-2.png);
+      }
+}
+
+.sunglasses-header-img-l {
+    background-image: url(../images/product-header-3.png);
+    @media (max-width: 767px) {
+        background-image: url(../images/product-header-sm-3.png);
+      }
+}
+
+.sunglasses-header-img-r {
+    background-image: url(../images/product-header-4.png);
+    @media (max-width: 767px) {
+        background-image: url(../images/product-header-sm-4.png);
+      }
+}
+
+
+.product-title {
+    margin-bottom: 32px;
+    text-align: center;
+    @media (max-width: 767px) {
+        margin-bottom: 24px;
+      }
+
+    .product-model {
+        font-size: 42px;
+        font-weight: 500;
+        color: black;
+        @media (max-width: 767px) {
+            font-size: 24px;
+          }
+    }
+
+    .product-material {
+        font-size: 32px;
+        font-weight: 400;
+        color: black;
+        @media (max-width: 767px) {
+            font-size: 24px;
+          }
+    }
+}
+
+.product-no {
+    font-size: 24px;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 500;
+    color: $primary;
+}
+
+.color-select {
+    .product-color1 {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        border-radius: 4px;
+        background-color: #5F3E2D;
+    }
+
+    .product-color2 {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        background-color: #B75929;
+    }
+}
