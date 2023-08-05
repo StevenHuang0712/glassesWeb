@@ -80,14 +80,7 @@
       width: 33.333%;
       border-left: 1px solid #DCDCDC;
       border-right: 1px solid #DCDCDC;
-
-      &:hover {
-          border-bottom: 8px solid $primary;
-          a {
-              padding-bottom: 16px;
-          }
-      }
-
+      
       a {
           display: block;
           padding: 24px 0;

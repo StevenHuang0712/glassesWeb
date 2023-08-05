@@ -1,0 +1,151 @@
+.special-nav {
+    color: white;
+
+    li {
+        padding: 13px 24px;
+
+        @media (max-width: 767px) {
+            padding: 12px 13px;
+          }
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+        
+        a{
+            font-size: 20px;
+            font-weight: 700;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+              }
+        }
+    }
+
+    .material-icons-outlined {
+        font-size: 40px;
+
+        @media (max-width: 767px) {
+            display: none;
+          }
+    }
+
+}
+
+.breadcrumb-item + .breadcrumb-item {
+        padding-left: 4px;
+        &::before {
+            padding-right: 4px;
+            content: "/";
+        }
+}
+
+.breadcrumb-active {
+    color: $primary;
+}
+
+.special-header-tags {
+    font-size: 24px;
+    font-weight: 700;
+    color: $primary;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+      }
+
+    span {
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+}
+
+.special-left {
+    h2 {
+        color: black;
+        font-weight: 400;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+          }
+    }
+
+    h3 {
+        color: black;
+        font-weight: 500;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+          }
+    }
+
+    p {
+        color: #555555;
+    }
+}
+
+.special-share {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #707070;
+
+    @media (max-width: 767px) {
+        display: none;
+      }
+
+    span {
+        margin-right: 16px;
+        color: #0A0A0A;
+        font-weight: 700;
+    }
+
+    a {
+        margin-right: 16px;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        img {
+            width: 24px;
+        }
+    }
+
+}
+
+.special-page {
+    @media (max-width: 767px) {
+        display: none;
+      }
+}
+
+.special-right {
+    width: 23.333%;
+    font-weight: 700;
+    color: $primary;
+    @media (max-width: 767px) {
+        display: none;
+      }
+
+    .special-tags-title {
+        font-size: 32px;
+        
+        .material-icons-outlined {
+            margin-right: 8px;
+            font-size: 48px;
+        }
+
+    }
+
+    .special-tags-content {
+        flex-wrap: wrap;
+        font-size: 24px;
+
+        a {
+            margin-right: 24px;
+        }
+    }
+}

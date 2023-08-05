@@ -7,7 +7,13 @@
         border: 1px solid #555555;
         text-align: center;
 
+        &:not(:last-child) {
+            /* 調整 border */
+            border-right: none;
+        }
+
         a {
+            display: block;
             font-size: 18px;
             color: #555555;
         }
