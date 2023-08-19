@@ -1,26 +1,17 @@
 .store-title {
-    margin-bottom: 40px;
-    @media (max-width: 767px) {
-        margin-bottom: 24px;
-      }
     
     h2 {
-        margin-bottom: 32px;
         padding-left: 16px;
         color: black;
         border-left: 8px solid $red;
-        @media (max-width: 767px) {
-            margin-bottom: 24px;
+        @include mobile {
             font-size: 24px;
           }
     }
 
     label {
-        
-        margin-right: 16px;
         font-size: 24px;
-        @media (max-width: 767px) {
-            margin-right: 8px;
+        @include mobile {
             font-size: 16px;
           }
     }
@@ -32,7 +23,7 @@
             border: 1px solid #CED4DA;
             outline: none;
             color: #495057;
-            @media (max-width: 767px) {
+            @include mobile {
                 width: 276px;
               }
         }
@@ -43,11 +34,8 @@
 }
 
 .store-img {
-    width: 526px;
-    height: 224px;
-    @media (max-width: 767px) {
-        width: 348px;
-      }
+    height: 100%;
+    object-fit: cover;
 }
 
 .store-name {
@@ -72,11 +60,27 @@
     background-color: black;
     border: 1px solid #00000020;
     color: white;
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 iframe {
-    @media (max-width: 767px) {
-        width: 348px;
+    @include pad {
+        height: 414px;
+      }
+
+    @include mobile {
         height: 208px;
       }
+}
+
+.store-info {
+    @include pad {
+        display: flex;
+      }
+
+    @include mobile {
+        display: block;
+    }
 }

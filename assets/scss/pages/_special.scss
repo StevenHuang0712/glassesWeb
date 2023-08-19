@@ -4,7 +4,7 @@
     li {
         padding: 13px 24px;
 
-        @media (max-width: 767px) {
+        @include mobile {
             padding: 12px 13px;
           }
 
@@ -20,7 +20,7 @@
             font-size: 20px;
             font-weight: 700;
 
-            @media (max-width: 767px) {
+            @include mobile {
                 font-size: 16px;
               }
         }
@@ -29,7 +29,7 @@
     .material-icons-outlined {
         font-size: 40px;
 
-        @media (max-width: 767px) {
+        @include mobile {
             display: none;
           }
     }
@@ -53,7 +53,7 @@
     font-weight: 700;
     color: $primary;
 
-    @media (max-width: 767px) {
+    @include mobile {
         font-size: 16px;
       }
 
@@ -69,7 +69,7 @@
         color: black;
         font-weight: 400;
 
-        @media (max-width: 767px) {
+        @include mobile {
             font-size: 24px;
           }
     }
@@ -78,7 +78,7 @@
         color: black;
         font-weight: 500;
 
-        @media (max-width: 767px) {
+        @include mobile {
             font-size: 16px;
           }
     }
@@ -89,26 +89,18 @@
 }
 
 .special-share {
-    margin-bottom: 24px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #707070;
 
-    @media (max-width: 767px) {
+    @include mobile {
         display: none;
       }
 
     span {
-        margin-right: 16px;
         color: #0A0A0A;
         font-weight: 700;
     }
 
     a {
-        margin-right: 16px;
-        &:last-child {
-            margin-right: 0;
-        }
-
         img {
             width: 24px;
         }
@@ -117,7 +109,8 @@
 }
 
 .special-page {
-    @media (max-width: 767px) {
+    border-top: 1px solid #707070;
+    @include mobile {
         display: none;
       }
 }
@@ -126,26 +119,43 @@
     width: 23.333%;
     font-weight: 700;
     color: $primary;
-    @media (max-width: 767px) {
+
+    @include pad {
+        width: 21.333%;
+      }
+
+    @include mobile {
         display: none;
       }
 
     .special-tags-title {
         font-size: 32px;
+        @include pad {
+            font-size: 16px;
+          }
         
         .material-icons-outlined {
-            margin-right: 8px;
             font-size: 48px;
-        }
 
+            @include pad {
+                font-size: 24px;
+              }
+        }
     }
 
     .special-tags-content {
         flex-wrap: wrap;
         font-size: 24px;
 
+        @include pad {
+            font-size: 16px;
+          }
+
         a {
             margin-right: 24px;
+            @include pad {
+                margin-right: 16px;
+              }
         }
     }
 }

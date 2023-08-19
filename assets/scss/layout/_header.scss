@@ -4,17 +4,18 @@
   padding-top: 16px;
   padding-bottom: 16px;
 
-  @media (max-width: 767px) {
+  @include mobile {
     flex-direction: column;
     padding: 16px 0 0 0;
     max-width: 100%;
     /* 移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
   }
+  
     .nav {
 
-      @media (max-width: 767px) {
+      @include mobile {
         flex-wrap: wrap;
-        }
+      }
 
         li {
               padding: 8px 32px;
@@ -26,17 +27,17 @@
                 opacity: 0.7;
               }
 
-              @media (max-width: 767px) {
+              @include mobile {
                 width: 50%;
                 padding: 0;
                 border: 1px solid white;
               }
 
                   a {
-                      display: block;
-                      height: 100%;
+                      padding: 25px 0;
                       
-                      @media (max-width: 767px) {
+                      @include mobile {
+                        display: block;
                         padding: 12px 0;
                         font-size: 16px;
                         text-align: center;
@@ -65,17 +66,19 @@
         height: 100%;
     }
 
-  @media (max-width: 767px) {
+    @include mobile {
     margin: 0 0 16px 12px;
   }
 }
 
 /* headerClassic */
 
-.glasses-type-bar {
-  @media (max-width: 767px) {
+.product-type-bar {
+
+  @include pad {
     padding: 0;
   }
+
   li {
       width: 33.333%;
       border-left: 1px solid #DCDCDC;
@@ -83,12 +86,15 @@
       
       a {
           display: block;
-          padding: 24px 0;
           text-align: center;
           font-size: 32px;
           font-weight: 500;
 
-          @media (max-width: 767px) {
+          @include pad {
+            font-size: 24px;
+          }
+
+          @include mobile {
             font-size: 16px;
           }
           
@@ -101,5 +107,8 @@
   border-bottom: 8px solid $primary;
       a {
           padding-bottom: 16px;
+          @include pad {
+            padding-bottom: 8px;
+          }
       }
 }

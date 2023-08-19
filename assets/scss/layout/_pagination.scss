@@ -7,6 +7,13 @@
         border: 1px solid #555555;
         text-align: center;
 
+        &:hover {
+            background-color: black;
+            a {
+                color: white;
+            }
+        }
+
         &:not(:last-child) {
             /* 調整 border */
             border-right: none;

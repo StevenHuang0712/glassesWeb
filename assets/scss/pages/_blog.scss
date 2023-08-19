@@ -1,7 +1,7 @@
 .blog-nav {
     color: white;
 
-    @media (max-width: 767px) {
+    @include mobile {
         display: none;
       }
 
@@ -24,12 +24,10 @@
 }
 
 .blog-title {
-    margin-bottom: 32px;
     padding-left: 16px;
     color: black;
     border-left: 8px solid $red;
-    @media (max-width: 767px) {
-        margin-bottom: 24px;
+    @include mobile {
         font-size: 24px;
       }
 }
@@ -38,14 +36,15 @@
     .blog-article-title {
         font-size: 32px;
         font-weight: 400;
-        @media (max-width: 767px) {
+        @include pad {
             font-size: 24px;
           }
     }
     
     .blog-article-subtitle {
         font-weight: 500;
-        @media (max-width: 767px) {
+
+        @include pad {
             font-size: 16px;
           }
     }
@@ -56,9 +55,16 @@
     }
 
     .blog-article-content {
-        @media (max-width: 767px) {
+
+        @include pad {
+            display: block;
+            height: auto;
+          }
+
+        @include mobile {
             display: none;
           }
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -67,12 +73,23 @@
         p {
             font-size: 20px;
             color: #555555;
+            @include pad {
+                display: inline;
+                font-size: 16px;
+              }
         }
     
         a {
             font-size: 36px;
             font-weight: 900;
             color: $secondary;
+            @include pad {
+                display: inline;
+                text-transform: lowercase;
+                font-size: 16px;
+                font-weight: 400;
+                color: #555555;
+              }
         }
     }
     

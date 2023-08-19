@@ -1,28 +1,45 @@
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
 .container {
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 12px;
-    /* pad */
-    @media (max-width: 992px) {
-        .container {
-        max-width: 720px; /* (696 + 24 gutter) */
-        }
+   
+    @include mobile {
+        // max-width: 372px; /* (348 + 24 gutter) */
+        max-width: 720px;
+        padding-left: 13px;
+        padding-right: 14px;
     }
-    /* mobile */
-    @media (max-width: 767px) {
-        .container {
-        max-width: 372px; /* (348 + 24 gutter) */
-        }
+
+    @include pad {
+        // max-width: 720px; /* (696 + 24 gutter) */
+        max-width: 960px;
+        padding: 0 36px;
     }
+  
 }
 
 .row {
     margin-left: -12px;
     margin-right: -12px;
     display: flex;
-    @media (max-width: 767px) {
+    @include pad {
         flex-wrap: wrap;
-      }
+    }
+    @include mobile {
+        flex-wrap: wrap;
+    }
 }
 
 .col-2 {
@@ -53,34 +70,28 @@
     width: 66.666%;
 }
 
+
+
+.col-md-6 {
+    @include pad {
+        width: 50%;
+    }
+}
+
+.col-md-9 {
+    @include pad {
+        width: 75%;
+    }
+}
+
 .col-md {
-    @media (max-width: 767px) {
+    @include pad {
         width: 100%;
-      }
-}
-
-
-
-
-
-
-
-
-
-/*
-@mixin pad {
-    @media (max-width: 992px) {
-        @content
     }
 }
 
- @include pad () { 
-     height: auto;
-}
-
-@mixin mobile {
-    @media (max-width: 767px) {
-        @content
+.col-sm {
+    @include mobile {
+        width: 100%;
     }
 }
-*/
